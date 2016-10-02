@@ -91,3 +91,6 @@ Place the `lightswitch` file in `/usr/local/bin/`.
 Thats it, your new wireless light switch should work
 
 It would be a good idea to create another user and have nginx and php run through that user for security reasons. Atleast the default password for the pi should be changed
+
+You can use the following image as a guide
+![layout](/pi-zero-lightswitch-layout.jpg)
