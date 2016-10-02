@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+#Copyright (C) 2016 Rumesh Sudhaharan
+#
+#This file is part of Lightswitch.
+#
+#Lightswitch is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#Lightswitch is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with Lightswitch.  If not, see <http://www.gnu.org/licenses/>.
+
+
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18,GPIO.OUT)
+GPIO.setup(20,GPIO.IN)
+
+if GPIO.input(20):
+	print "LED is on"
+	print "Turning off LED"
+	GPIO.output(18,GPIO.LOW)
+else:
+	print "LED is off"
+	print "Turning on LED"
+	GPIO.output(18,GPIO.HIGH)
